@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podzimní firemní akce se slevou až 60 % | Hotel Kaskáda Brno</title>
+<meta name="description" content="Vaše podzimní konference, zasedání nebo teambuilding si zaslouží výhled na golfové hřiště. Sleva až 60 % na pronájem prostor pro akce v říjnu 2026, 15 minut od Brna.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Podzimní firemní akce se slevou až 60 % | Hotel Kaskáda Brno">
+<meta property="og:description" content="Vaše podzimní konference si zaslouží tenhle výhled. Sleva až 60 % na pronájem prostor pro akce v říjnu 2026.">
+<meta property="og:image" content="assets/restaurant.jpg">
+<meta property="og:locale" content="cs_CZ">
+
+<!-- GA4 / Meta Pixel: zakomentované, doplňte ID -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#f6f3ec;--paper-2:#efe9df;--card:#ffffff;
+  --ink:#1b1d1f;--ink-soft:#3c4043;--muted:#71767b;
+  --line:rgba(27,29,31,.13);--line-soft:rgba(27,29,31,.08);
+  --red:#d20b16;--dark:#141618;--dark-muted:#a2a7ae;--dark-line:rgba(255,255,255,.12);
+  --radius:16px;--maxw:1180px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.62;overflow-x:hidden}
+body.modal-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Archivo",sans-serif;margin:0;letter-spacing:-.02em;line-height:1.08}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.eyebrow{font-family:"Manrope";font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-soft);margin:0 0 16px;display:inline-flex;align-items:center;gap:11px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red);display:inline-block}
+.eyebrow.center{justify-content:center}
+.section{padding:80px 0}
+.lead{color:var(--ink-soft);font-size:18px;max-width:60ch}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:"Manrope";font-weight:700;
+  font-size:15.5px;padding:15px 30px;border-radius:100px;border:0;cursor:pointer;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s;white-space:nowrap}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 24px -14px rgba(210,11,22,.5)}
+.btn-primary:hover{transform:translateY(-2px);background:#ec121d;box-shadow:0 16px 30px -16px rgba(210,11,22,.6)}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:0 10px 24px -14px rgba(27,29,31,.55)}
+.btn-dark:hover{transform:translateY(-2px);background:#000;box-shadow:0 16px 30px -16px rgba(27,29,31,.65)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn-lg{padding:17px 36px;font-size:16.5px}
+.btn svg{width:18px;height:18px}
+
+.head{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s,border-color .35s,backdrop-filter .35s;border-bottom:1px solid transparent}
+.head.scrolled{background:rgba(246,243,236,.85);backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--line-soft)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.head img{height:25px;width:auto}
+.head .btn{padding:11px 22px;font-size:14px}
+.head-cta-wrap{display:flex;align-items:center;gap:16px}
+.head-phone{color:var(--ink-soft);font-weight:600;font-size:14.5px;display:none}
+.head-phone:hover{color:var(--ink)}
+
+/* Hero */
+.hero{padding:88px 0 12px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.hero h1{font-size:clamp(31px,7.6vw,62px);font-weight:700;letter-spacing:-.03em}
+.rotator{display:inline-block;overflow:hidden;vertical-align:bottom}
+.rw{display:inline-block;color:var(--red);transition:opacity .42s var(--ease),transform .42s var(--ease);will-change:transform,opacity}
+.hero .sub{font-size:clamp(15.5px,2.1vw,19px);color:var(--ink-soft);margin:16px 0 0;max-width:46ch}
+.hero-photo{border-radius:18px;overflow:hidden;aspect-ratio:16/10;max-height:34vh;box-shadow:0 40px 80px -52px rgba(27,29,31,.6)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-cta{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.hero-cta .btn{width:100%}
+.hero-trust{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;color:var(--muted);font-size:13.5px;font-weight:600}
+.hero-trust .d{display:inline-flex;align-items:center;gap:7px}
+.hero-trust svg{width:15px;height:15px;color:var(--red)}
+.hero-trust .dot{width:7px;height:7px;border-radius:50%;background:#3a9a4a}
+
+/* Section head */
+.sec-head{max-width:680px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(28px,4.6vw,44px);font-weight:700;letter-spacing:-.03em}
+.sec-head p{margin-top:16px;color:var(--ink-soft);font-size:18px}
+.sec-head.center{margin:0 auto 44px;text-align:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+
+/* Tiers */
+.tiers{display:grid;grid-template-columns:1fr;gap:16px}
+.tier{position:relative;background:var(--card);border:1px solid var(--line-soft);border-radius:var(--radius);padding:28px 24px;
+  box-shadow:0 20px 50px -40px rgba(27,29,31,.4);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
+.tier:hover{transform:translateY(-4px)}
+.tier.featured{border-color:rgba(210,11,22,.45)}
+.tier .tag{position:absolute;top:16px;right:16px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);border:1px solid rgba(210,11,22,.4);border-radius:100px;padding:4px 11px}
+.tier .lbl{font-weight:600;color:var(--muted);font-size:15px}
+.tier .pct{font-family:"Archivo";font-weight:800;font-size:clamp(42px,7vw,56px);line-height:1;margin:10px 0 8px;letter-spacing:-.03em;color:var(--ink)}
+.tier.featured .pct{color:var(--red)}
+.tier .desc{color:var(--muted);font-size:14.5px;margin:0}
+.tiers-note{margin-top:22px;color:var(--muted);font-size:13.5px;max-width:72ch;line-height:1.6}
+
+/* Co nabízíme – foto bento */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gtile{position:relative;display:flex;border-radius:14px;overflow:hidden;min-height:154px;box-shadow:0 18px 40px -30px rgba(27,29,31,.5)}
+.gtile.big{grid-column:1 / -1;min-height:224px}
+.gtile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.gtile:hover img{transform:scale(1.06)}
+.gtile .cap{position:relative;z-index:2;width:100%;display:flex;align-items:flex-end;padding:16px;
+  background:linear-gradient(transparent 38%,rgba(10,11,12,.8));color:#fff;font-weight:700;font-size:14.5px;line-height:1.25}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;justify-content:center}
+.facts span{padding:10px 18px;border:1px solid var(--line);border-radius:100px;font-weight:600;font-size:14px;color:var(--ink-soft)}
+
+/* Closing */
+.cta-band{text-align:center}
+.cta-band h2{font-size:clamp(28px,4.6vw,44px);font-weight:700;max-width:18ch;margin:0 auto;letter-spacing:-.03em}
+.cta-band p{color:var(--ink-soft);margin:16px auto 26px;max-width:48ch;font-size:17px}
+
+/* Footer */
+.foot{background:#0e0f11;color:var(--dark-muted);padding:52px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:30px}
+.foot img{height:28px;margin-bottom:16px}
+.foot p{color:var(--dark-muted);font-size:15px;margin:0 0 6px}
+.foot a.line{color:#e6e8ea;font-weight:600;display:inline-block;margin-top:2px}
+.foot a.line:hover{color:#fff}
+.foot h4{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#fff;margin:0 0 14px;font-family:"Manrope";font-weight:700}
+.foot-bottom{border-top:1px solid var(--dark-line);margin-top:36px;padding-top:22px;color:#6a6f76;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+
+/* Sticky mobile CTA */
+.mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:55;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(246,243,236,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line);display:flex;gap:10px;transform:translateY(120%);transition:transform .4s var(--ease)}
+.mobile-cta.show{transform:translateY(0)}
+.mobile-cta .btn{flex:1;padding:15px}
+.mobile-cta .btn-call{flex:0 0 auto;width:54px;padding:0;background:transparent;border:1px solid var(--line);color:var(--ink)}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:18px;
+  background:rgba(14,15,16,.62);backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal{width:100%;max-width:500px;max-height:92vh;overflow-y:auto;background:var(--card);border-radius:20px;padding:34px 26px 30px;
+  position:relative;transform:translateY(18px) scale(.98);transition:transform .35s var(--ease);box-shadow:0 40px 100px -40px rgba(14,15,16,.75)}
+.modal-overlay.open .modal{transform:none}
+.modal-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
+  background:#fff;color:var(--ink);font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.modal-close:hover{background:var(--paper-2)}
+.fc-head{margin-bottom:18px}
+.fc-head h2{font-size:22px;font-weight:700}
+.fc-head p{color:var(--muted);font-size:14px;margin:6px 0 0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.col-2{grid-column:1/-1}
+.field label{font-size:13px;font-weight:600;color:var(--ink-soft)}
+.field label .req{color:var(--red)}
+.field .opt{color:var(--muted);font-weight:500}
+.field input{width:100%;padding:13px 15px;border-radius:11px;border:1px solid var(--line);background:#fff;color:var(--ink);font-family:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s}
+.field input::placeholder{color:#a7abb0}
+.field input:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(210,11,22,.1)}
+.disc-badge{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:-2px;
+  padding:13px 16px;border-radius:12px;border:1px dashed var(--line);background:var(--paper);transition:border-color .3s,background .3s}
+.disc-badge .t{font-size:13px;color:var(--muted);line-height:1.35}
+.disc-badge .v{font-family:"Archivo";font-weight:800;font-size:22px;color:var(--muted);flex:0 0 auto;letter-spacing:-.02em}
+.disc-badge.active{border-style:solid;border-color:var(--red);background:rgba(210,11,22,.06)}
+.disc-badge.active .t{color:var(--ink-soft)}
+.disc-badge.active .v{color:var(--red)}
+.consent{display:flex;gap:11px;align-items:flex-start;grid-column:1/-1;margin-top:2px}
+.consent input{width:19px;height:19px;flex:0 0 auto;margin-top:2px;accent-color:var(--red)}
+.consent label{font-size:12.5px;color:var(--muted);line-height:1.5}
+.consent a{color:var(--ink-soft);text-decoration:underline}
+.form-submit{grid-column:1/-1;margin-top:4px}
+.form-submit .btn{width:100%}
+.form-note{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;margin-top:2px;display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
+.form-note svg{width:14px;height:14px;color:#3a9a4a}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
+.form-status{display:none;text-align:center;padding:14px 6px}
+.form-status.show{display:block}
+.form-status .ok-ic{width:60px;height:60px;border-radius:50%;background:rgba(58,154,74,.12);border:1px solid rgba(58,154,74,.5);display:grid;place-items:center;margin:0 auto 18px;color:#3a9a4a}
+.form-status .ok-ic svg{width:30px;height:30px}
+.form-status h2{font-size:22px;font-weight:700;margin-bottom:9px}
+.form-status p{color:var(--ink-soft);max-width:40ch;margin:0 auto;font-size:15px}
+.form-error{display:none;grid-column:1/-1;background:rgba(210,11,22,.08);border:1px solid rgba(210,11,22,.4);color:#b00c15;border-radius:11px;padding:12px 15px;font-size:13.5px;text-align:center}
+.form-error.show{display:block}
+.btn[disabled]{opacity:.6;cursor:not-allowed;transform:none}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.rw{transition:none}html{scroll-behavior:auto}}
+
+@media(min-width:700px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}.head-phone{display:inline}.tiers{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(4,1fr);grid-auto-rows:162px}.gtile{min-height:0}.gtile.big{grid-column:span 2;grid-row:span 2;min-height:0}}
+@media(min-width:960px){
+  .section{padding:104px 0}
+  .hero{padding:150px 0 40px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;column-gap:60px;row-gap:30px;align-items:center;
+    grid-template-areas:"text photo" "cta photo"}
+  .hero-text{grid-area:text} .hero-photo{grid-area:photo;aspect-ratio:3/4;max-height:none;align-self:stretch}
+  .hero-cta{grid-area:cta}
+  .hero-cta .btn{width:auto}
+  .mobile-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="head" id="head">
+  <div class="wrap">
+    <a href="#" aria-label="Hotel Kaskáda Brno"><img src="assets/logo-hotel-black.png" alt="Hotel Kaskáda Brno"></a>
+    <div class="head-cta-wrap">
+      <a class="head-phone" href="tel:+420604290817">+420 604 290 817</a>
+      <button class="btn btn-dark" data-modal>Chci nabídku</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <h1>Vaše podzimní<br><span class="rotator"><span class="rw" id="rotword">konference</span></span><br>si zaslouží tenhle výhled.</h1>
+        <p class="sub">Sál, gastro, bowling i golf s výhledem na hřiště. A k tomu sleva na pronájem, která roste s každým dalším člověkem. Čím víc kolegů vezmete, tím míň zaplatíte.</p>
+      </div>
+      <div class="hero-photo reveal">
+        <img src="assets/restaurant.jpg" alt="Terasa hotelu Kaskáda s výhledem na golfové hřiště" fetchpriority="high">
+      </div>
+      <div class="hero-cta reveal">
+        <button class="btn btn-primary btn-lg" data-modal>Spočítat moji slevu
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div class="hero-trust">
+          <span class="d"><span class="dot"></span> Ozveme se do 24 hodin</span>
+          <span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Termíny mizí, poptávejte do 30. 9. 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERY -->
+<section class="section" id="sleva">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Víc lidí, větší sleva. Bez háčků.</h2>
+      <p class="lead">Platí na firemní akce s termínem v <strong>říjnu 2026</strong>. Slevu počítáme z ceny pronájmu prostor podle toho, kolik vás dorazí.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier"><div class="lbl">20 a víc lidí</div><div class="pct">20 %</div><p class="desc">Menší workshop, co nechce skončit u flipchartu a instantní kávy.</p></div>
+      <div class="tier"><div class="lbl">40 a víc lidí</div><div class="pct">40 %</div><p class="desc">Půlka firmy na jednom místě. A za prostory platíte o 40 % míň.</p></div>
+      <div class="tier featured"><span class="tag">Nejvíc ušetříte</span><div class="lbl">60 a víc lidí</div><div class="pct">60 %</div><p class="desc">Velká konference až do 120 lidí. Maximální sleva, maximální parket.</p></div>
+    </div>
+    <p class="tiers-note">Sleva se vztahuje na pronájem konferenčních prostor (sál, restaurace, terasa) a platí pro nové poptávky na termíny v říjnu 2026. Nelze kombinovat s jinými slevami. Konečnou nabídku připravíme na míru podle rozsahu akce.</p>
+  </div>
+</section>
+
+<!-- CO ZÍSKÁTE -->
+<section class="section" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2>Sál, gastro, zábava, klid na spaní. Nic nechybí.</h2>
+      <p>Vy dovezete lidi a program. O zbytek se postaráme my. Bez přejíždění, bez stresu, bez „a kde teď seženeme oběd“.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="gtile big"><img src="assets/restaurant.jpg" alt="Terasa restaurace s výhledem na golfové hřiště" loading="lazy"><div class="cap">Terasa s výhledem na hřiště · až 70 osob</div></div>
+      <div class="gtile"><img src="assets/room.jpg" alt="Hotelový pokoj Kaskáda" loading="lazy"><div class="cap">47 pokojů na místě</div></div>
+      <div class="gtile"><img src="assets/wellness.jpg" alt="Wellness v hotelu Kaskáda" loading="lazy"><div class="cap">Wellness, když den utáhne</div></div>
+      <div class="gtile"><img src="assets/golf.jpg" alt="Golfové hřiště resortu Kaskáda" loading="lazy"><div class="cap">Seznámení s golfem</div></div>
+      <div class="gtile"><img src="assets/catering.jpg" alt="Restaurace s prostřenými stoly a výhledem na hřiště" loading="lazy"><div class="cap">Všestranný catering</div></div>
+    </div>
+    <div class="facts reveal">
+      <span>Kongresový sál až 120 osob</span><span>Bowling &amp; golfový simulátor</span><span>Parkování zdarma</span><span>15 min od Brna</span>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Říjen je krátký. Dobré termíny mizí první.</h2>
+      <p>Řekněte nám počet lidí a přibližný termín. Do 24 hodin máte nabídku na míru i s vaší slevou.</p>
+      <button class="btn btn-primary btn-lg" data-modal>Chci nezávaznou nabídku</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo-hotel-white.png" alt="Hotel Kaskáda Brno">
+        <p style="max-width:34ch">Hotel Kaskáda Brno, součást TMR Hotels. Kompletní kongresové zázemí 15 minut od centra Brna.</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <p>E-mail: <a class="line" href="mailto:jakub.julina@tmr.sk">jakub.julina@tmr.sk</a></p>
+        <p>Telefon: <a class="line" href="tel:+420604290817">+420 604 290 817</a></p>
+      </div>
+      <div>
+        <h4>Kde nás najdete</h4>
+        <p>Hotel Kaskáda Brno<br>Jinačovice, 15 min od Brna</p>
+        <a class="line" href="https://maps.google.com/?q=Hotel+Kaskáda+Brno" target="_blank" rel="noopener">Zobrazit na mapě →</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Hotel Kaskáda Brno · TMR Hotels. Všechna práva vyhrazena.</span>
+      <span>Podzimní akce · Říjen 2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="mobile-cta" id="mobileCta">
+  <button class="btn btn-primary" data-modal>Chci nezávaznou nabídku</button>
+  <a class="btn btn-call" href="tel:+420604290817" aria-label="Zavolat">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.5 2.8.6a2 2 0 011.8 2.1z"/></svg>
+  </a>
+</div>
+
+<!-- MODAL: FORMULÁŘ -->
+<div class="modal-overlay" id="modal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Zavřít">&times;</button>
+    <div class="fc-head">
+      <h2 id="modalTitle">Spočítejte si slevu</h2>
+      <p>Napište počet lidí. Hned vidíte, kolik ušetříte, a my se ozveme do 24 hodin.</p>
+    </div>
+    <form id="leadForm" novalidate>
+      <!-- WEB3FORMS: nahraďte YOUR_ACCESS_KEY klíčem z web3forms.com -->
+      <input type="hidden" name="access_key" value="50ed6c21-8cb6-4977-9472-484f88053f9d">
+      <input type="hidden" name="subject" value="Nová poptávka – PODZIMNÍ AKCE ŘÍJEN 2026 – Kaskáda">
+      <input type="hidden" name="from_name" value="Kaskáda – akce říjen 2026">
+      <input type="hidden" name="sleva_pronajem" id="slevaField" value="0 %">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <div class="form-grid" id="formFields">
+        <div class="field col-2">
+          <label for="people">Počet osob <span class="req">*</span></label>
+          <input id="people" name="pocet_osob" type="number" min="1" inputmode="numeric" required placeholder="např. 45">
+        </div>
+        <div class="disc-badge" id="discBadge">
+          <span class="t" id="discText">Sleva startuje od 20 lidí</span>
+          <span class="v" id="discValue">0 %</span>
+        </div>
+        <div class="field"><label for="name">Jméno a příjmení <span class="req">*</span></label><input id="name" name="name" type="text" required placeholder="Jan Novák" autocomplete="name"></div>
+        <div class="field"><label for="company">Firma <span class="req">*</span></label><input id="company" name="company" type="text" required placeholder="Vaše společnost" autocomplete="organization"></div>
+        <div class="field"><label for="email">E-mail <span class="req">*</span></label><input id="email" name="email" type="email" required placeholder="jan@firma.cz" autocomplete="email"></div>
+        <div class="field"><label for="phone">Telefon <span class="opt">(nepovinné)</span></label><input id="phone" name="phone" type="tel" placeholder="+420 …" autocomplete="tel"></div>
+        <div class="consent"><input id="gdpr" type="checkbox" required>
+          <label for="gdpr">Souhlasím se zpracováním osobních údajů za účelem vyřízení poptávky (<a href="#" target="_blank" rel="noopener">zásady</a>). <span class="req">*</span></label></div>
+        <div class="form-error" id="formError">Zkontrolujte prosím povinná pole a souhlas.</div>
+        <div class="form-submit"><button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Odeslat poptávku
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <div class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Bez závazků · Ozveme se do 24 hodin</div>
+      </div>
+    </form>
+    <div class="form-status" id="formSuccess">
+      <div class="ok-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h2>Máme to!</h2>
+      <p>Ozveme se do 24 hodin s nabídkou na míru i s vaší slevou.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,c){return (c||document).querySelector(s)};
+  $('#yr').textContent=new Date().getFullYear();
+
+  // Header + sticky CTA
+  var head=$('#head'),mcta=$('#mobileCta'),hero=$('.hero');
+  function onScroll(){var y=window.pageYOffset;head.classList.toggle('scrolled',y>40);
+    mcta.classList.toggle('show',y>40);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Reveal
+  var reveals=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});reveals.forEach(function(el){io.observe(el)});}else{reveals.forEach(function(el){el.classList.add('in')});}
+
+  // Rotující slovo v headingu
+  var words=['konference','zasedání','teambuilding'],idx=0,rw=$('#rotword');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setInterval(function(){
+    idx=(idx+1)%words.length;
+    if(reduce){rw.textContent=words[idx];return;}
+    rw.style.opacity='0';rw.style.transform='translateY(-.4em)';
+    setTimeout(function(){
+      rw.textContent=words[idx];
+      rw.style.transition='none';rw.style.transform='translateY(.45em)';
+      // force reflow
+      void rw.offsetWidth;
+      rw.style.transition='';rw.style.opacity='1';rw.style.transform='';
+    },420);
+  },2600);
+
+  // Modal
+  var modal=$('#modal'),lastFocus=null;
+  function openModal(){lastFocus=document.activeElement;modal.classList.add('open');modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');setTimeout(function(){var f=$('#people');if(f)f.focus();},340);}
+  function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+  document.querySelectorAll('[data-modal]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();openModal();});});
+  $('#modalClose').addEventListener('click',closeModal);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
+
+  // Živý výpočet slevy
+  var peopleInput=$('#people'),badge=$('#discBadge'),discText=$('#discText'),discValue=$('#discValue'),slevaField=$('#slevaField');
+  function discountFor(n){if(n>=60)return 60;if(n>=40)return 40;if(n>=20)return 20;return 0;}
+  peopleInput.addEventListener('input',function(){
+    var n=parseInt(peopleInput.value,10),d=(n&&n>0)?discountFor(n):0;
+    discValue.textContent=d+' %';slevaField.value=d+' %';
+    if(d>0){badge.classList.add('active');discText.textContent='Ušetříte na pronájmu prostor';}
+    else{badge.classList.remove('active');discText.textContent='Sleva startuje od 20 lidí';}
+  });
+
+  // Form submit
+  var form=$('#leadForm'),errBox=$('#formError'),btn=$('#submitBtn'),fields=$('#formFields'),success=$('#formSuccess'),gdpr=$('#gdpr');
+  form.addEventListener('submit',function(ev){ev.preventDefault();errBox.classList.remove('show');
+    if(!(form.checkValidity()&&gdpr.checked)){errBox.classList.add('show');var fi=form.querySelector(':invalid')||(!gdpr.checked?gdpr:null);if(fi&&fi.focus)fi.focus();return;}
+    btn.disabled=true;var original=btn.innerHTML;btn.innerHTML='Odesílám…';
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+    .then(function(r){return r.json()}).then(function(res){
+      if(res.success){fields.style.display='none';success.classList.add('show');
+        if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'form',event_label:'akce_rijen_2026'});}
+        if(typeof fbq==='function'){fbq('track','Lead',{content_name:'Akce rijen 2026'});}
+      }else{throw new Error(res.message||'error');}
+    }).catch(function(){btn.disabled=false;btn.innerHTML=original;errBox.textContent='Něco se nepovedlo. Zkuste to prosím znovu, nebo napište na jakub.julina@tmr.sk.';errBox.classList.add('show');});
+  });
+})();
+</script>
+</body>
+</html>

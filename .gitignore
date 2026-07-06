@@ -1,0 +1,10 @@
+# pracovní / review artefakty
+.impeccable/
+.playwright-mcp/
+
+# interní podklad, nepublikovat
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
