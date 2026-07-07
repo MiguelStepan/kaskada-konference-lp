@@ -65,6 +65,7 @@ src="https://www.facebook.com/tr?id=1491713005580203&ev=PageView&noscript=1"
   --cream-ink:#1a1c1e;
   --cream-muted:#5c6167;
   --ghost:rgba(246,244,239,.15);
+  --banner-h:40px;
   --radius:18px;
   --maxw:1180px;
   --ease:cubic-bezier(.2,.7,.2,1);
@@ -100,8 +101,17 @@ h1,h2,h3{font-family:"Archivo",sans-serif;line-height:1.06;margin:0;letter-spaci
 .btn-lg{padding:18px 36px;font-size:17px}
 .btn svg{width:18px;height:18px}
 
+/* ---------- Top banner ---------- */
+.top-banner{position:fixed;top:0;left:0;right:0;z-index:65;height:var(--banner-h);
+  background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:0 14px;font-size:13px;font-weight:600;overflow:hidden;white-space:nowrap;
+  transition:background .2s}
+.top-banner:hover{background:#f00a1a}
+.top-banner .go{text-decoration:underline;font-weight:700;flex:0 0 auto}
+.bn-short{display:none}
+
 /* ---------- Header ---------- */
-.head{position:fixed;top:0;left:0;right:0;z-index:60;
+.head{position:fixed;top:var(--banner-h);left:0;right:0;z-index:60;
   transition:background .35s,border-color .35s,backdrop-filter .35s;border-bottom:1px solid transparent}
 .head.scrolled{background:rgba(12,13,15,.85);backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--line)}
 .head .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
@@ -117,7 +127,7 @@ h1,h2,h3{font-family:"Archivo",sans-serif;line-height:1.06;margin:0;letter-spaci
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
 .hero-bg::after{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(12,13,15,.72),rgba(12,13,15,.6) 40%,rgba(12,13,15,.9))}
-.hero .wrap{position:relative;z-index:2;padding-top:118px;padding-bottom:60px}
+.hero .wrap{position:relative;z-index:2;padding-top:158px;padding-bottom:60px}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
 .hero-copy{max-width:600px}
 .hero h1{font-size:clamp(38px,7vw,62px);font-weight:800}
@@ -144,7 +154,12 @@ h1,h2,h3{font-family:"Archivo",sans-serif;line-height:1.06;margin:0;letter-spaci
   background:rgba(255,255,255,.06);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .2s}
 .modal-close:hover{background:rgba(255,255,255,.12)}
 body.modal-open{overflow:hidden}
-.fc-head{margin-bottom:18px}
+.modal-promo{background:rgba(227,6,19,.1);border:1px solid rgba(227,6,19,.35);border-radius:12px;
+  padding:12px 14px;margin-bottom:16px;font-size:13px;color:var(--muted-2);line-height:1.5}
+.modal-promo strong{color:#fff}
+.modal-promo b{color:var(--red);font-weight:800}
+.modal-promo .mp-tiers{display:block;margin-top:4px;color:var(--muted);font-weight:600}
+.fc-head{margin-bottom:14px}
 .fc-head h2{font-size:23px;font-weight:800}
 .fc-head p{color:var(--muted);font-size:14px;margin:6px 0 0}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -230,6 +245,22 @@ body.modal-open{overflow:hidden}
 .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;justify-content:center}
 .facts span{padding:10px 18px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.03);font-weight:600;font-size:14px;color:var(--muted-2)}
 
+/* ---------- Discount tiers ---------- */
+.tiers{display:grid;grid-template-columns:1fr;gap:16px}
+.tier{position:relative;background:linear-gradient(180deg,var(--panel),#141619);border:1px solid var(--line);
+  border-radius:var(--radius);padding:28px 26px;transition:transform .35s var(--ease),border-color .35s}
+.tier:hover{transform:translateY(-4px)}
+.tier.featured{border-color:rgba(227,6,19,.5)}
+.tier .tag{position:absolute;top:16px;right:16px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--red);border:1px solid rgba(227,6,19,.45);border-radius:100px;padding:4px 11px}
+.tier .lbl{font-weight:600;color:var(--muted-2);font-size:15px}
+.tier .pct{font-family:"Archivo";font-weight:800;font-size:clamp(42px,7vw,56px);line-height:1;margin:10px 0 8px;letter-spacing:-.03em;color:var(--white)}
+.tier.featured .pct{color:var(--red)}
+.tier .desc{color:var(--muted);font-size:14.5px;margin:0}
+.tiers-note{margin:22px auto 0;color:var(--muted);font-size:13.5px;max-width:64ch;line-height:1.6;text-align:center}
+.sleva-cta{text-align:center;margin-top:30px}
+#sleva{scroll-margin-top:118px}
+
 /* ---------- Closing CTA band ---------- */
 .cta-band{text-align:center}
 .cta-band h2{font-size:clamp(28px,4.8vw,44px);font-weight:800;max-width:16ch;margin:0 auto}
@@ -260,6 +291,11 @@ body.modal-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.rw{transition:none}html{scroll-behavior:auto}}
 
 /* ---------- Responsive ---------- */
+@media(max-width:620px){
+  .bn-full{display:none}
+  .bn-short{display:inline}
+  .top-banner{font-size:12px;gap:8px}
+}
 @media(min-width:680px){
   .form-grid .field.half{grid-column:auto}
   .foot-grid{grid-template-columns:1.4fr 1fr 1fr}
@@ -267,10 +303,11 @@ body.modal-open{overflow:hidden}
   .gallery{grid-template-columns:repeat(4,1fr);grid-auto-rows:162px}
   .gtile{min-height:0}
   .gtile.big{grid-column:span 2;grid-row:span 2;min-height:0}
+  .tiers{grid-template-columns:repeat(3,1fr)}
 }
 @media(min-width:960px){
   .section{padding:104px 0}
-  .hero .wrap{padding-top:130px;padding-bottom:80px;min-height:100svh;display:flex;align-items:center}
+  .hero .wrap{padding-top:170px;padding-bottom:80px;min-height:100svh;display:flex;align-items:center}
   .hero-grid{grid-template-columns:1fr;gap:56px}
   .hero-stats{grid-template-columns:repeat(5,auto);gap:0}
   .hero-stats .hstat{padding:0 26px;border-left:1px solid var(--line)}
@@ -283,6 +320,13 @@ body.modal-open{overflow:hidden}
 </style>
 </head>
 <body>
+
+<!-- ============ TOP BANNER ============ -->
+<a class="top-banner" href="#sleva">
+  <span class="bn-full">Podzimní akce: říjnové termíny se zvýhodněnou cenou pronájmu</span>
+  <span class="bn-short">Zvýhodněné pronájmy v říjnu</span>
+  <span class="go">Jak to funguje →</span>
+</a>
 
 <!-- ============ HEADER ============ -->
 <header class="head" id="head">
@@ -347,6 +391,23 @@ body.modal-open{overflow:hidden}
   </div>
 </section>
 
+<!-- ============ SLEVOVÝ SYSTÉM (říjen) ============ -->
+<section class="section" id="sleva">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2>Čím větší akce, tím výhodnější nabídka</h2>
+      <p>Pořádáte firemní akci v říjnu? Získáte slevu na pronájem konferenčních prostor podle počtu účastníků. Čím víc lidí, tím větší sleva.</p>
+    </div>
+    <div class="tiers reveal">
+      <div class="tier"><div class="lbl">20 a víc lidí</div><div class="pct">20 %</div><p class="desc">Sleva na pronájem prostor pro menší firemní akce a workshopy.</p></div>
+      <div class="tier"><div class="lbl">40 a víc lidí</div><div class="pct">40 %</div><p class="desc">Sleva na pronájem pro střední konference a firemní setkání.</p></div>
+      <div class="tier featured"><span class="tag">Nejvíc ušetříte</span><div class="lbl">60 a víc lidí</div><div class="pct">60 %</div><p class="desc">Maximální sleva na pronájem pro velké konference až do 120 osob.</p></div>
+    </div>
+    <p class="tiers-note reveal">Zvýhodněné ceny pronájmu platí pro nové poptávky na termíny v <strong>říjnu 2026</strong>. Sleva se počítá z ceny pronájmu prostor, konečnou nabídku připravíme na míru.</p>
+    <div class="sleva-cta reveal"><button class="btn btn-primary btn-lg" data-modal>Nezávazná poptávka</button></div>
+  </div>
+</section>
+
 <!-- ============ ZÁZEMÍ / BENTO ============ -->
 <section class="section section-alt" id="prostory">
   <div class="wrap">
@@ -408,6 +469,10 @@ body.modal-open{overflow:hidden}
     <div class="fc-head">
       <h2 id="modalTitle">Nezávazná poptávka</h2>
       <p>Ozveme se do 24 hodin s termínem a nabídkou na míru.</p>
+    </div>
+    <div class="modal-promo">
+      <strong>Podzimní akce:</strong> na říjnové termíny sleva na pronájem až <b>60 %</b>.
+      <span class="mp-tiers">20+ osob → 20 % · 40+ → 40 % · 60+ → 60 %</span>
     </div>
     <form id="leadForm" novalidate>
       <input type="hidden" name="access_key" value="50ed6c21-8cb6-4977-9472-484f88053f9d">
