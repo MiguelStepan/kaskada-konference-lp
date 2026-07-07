@@ -16,21 +16,11 @@
 <meta property="og:locale" content="cs_CZ">
 
 <!-- =====================================================================
-     MĚŘENÍ KONVERZÍ — až budete mít účty, odkomentujte a doplňte ID.
-     Konverze z odeslaného formuláře se pošle automaticky (viz skript dole).
+     MĚŘENÍ KONVERZÍ — GA4 (G-T8RQV6X3BD) i Meta Pixely (1491713005580203 +
+     1066234112635616) se načítají až PO souhlasu s cookies (GDPR), viz funkce
+     loadPixel() v cookie consent skriptu dole. Konverze z odeslaného formuláře
+     se odešle automaticky: GA4 event „generate_lead" + Meta „Lead".
      ===================================================================== -->
-
-<!-- ---- Google Analytics 4 (GA4) ----
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');   // <-- SEM VLOŽTE GA4 Measurement ID
-</script>
--->
-
-<!-- Meta Pixely (ID 1491713005580203 + 1066234112635616) se načítají až PO souhlasu s cookies — viz cookie consent skript dole. -->
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -651,13 +641,26 @@ body.modal-open{overflow:hidden}
   var $ = function(s,c){return (c||document).querySelector(s)};
   $('#yr').textContent = new Date().getFullYear();
 
-  // ---- Cookie consent + Meta Pixel (načte se až po souhlasu) ----
+  // ---- Cookie consent + měření (GA4 + Meta Pixel) – načte se až po souhlasu ----
   function loadPixel(){
-    if(window.fbq) return;
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','1491713005580203');
-    fbq('init','1066234112635616');
-    fbq('track','PageView');
+    // Google Analytics 4
+    if(!window.__ga4){
+      window.__ga4=true;
+      window.dataLayer=window.dataLayer||[];
+      window.gtag=function(){dataLayer.push(arguments);};
+      var ga=document.createElement('script');ga.async=true;
+      ga.src='https://www.googletagmanager.com/gtag/js?id=G-T8RQV6X3BD';
+      document.head.appendChild(ga);
+      gtag('js',new Date());
+      gtag('config','G-T8RQV6X3BD');
+    }
+    // Meta Pixely
+    if(!window.fbq){
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init','1491713005580203');
+      fbq('init','1066234112635616');
+      fbq('track','PageView');
+    }
   }
   var ccBar=$('#cookieBar'), ccConsent=null;
   try{ ccConsent=localStorage.getItem('cc-consent'); }catch(e){}
