@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Podzimní firemní akce se slevou až 60 % | Hotel Kaskáda Brno</title>
-<meta name="description" content="Vaše podzimní konference, zasedání nebo teambuilding si zaslouží výhled na golfové hřiště. Sleva až 60 % na pronájem prostor pro akce v říjnu 2026, 15 minut od Brna.">
+<title>Podzimní firemní akce se slevou 30 % | Hotel Kaskáda Brno</title>
+<meta name="description" content="Vaše podzimní konference, zasedání nebo teambuilding si zaslouží výhled na golfové hřiště. Sleva 30 % na celodenní pronájem prostor pro akce v říjnu 2026, 15 minut od Brna.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Podzimní firemní akce se slevou až 60 % | Hotel Kaskáda Brno">
-<meta property="og:description" content="Vaše podzimní konference si zaslouží tenhle výhled. Sleva až 60 % na pronájem prostor pro akce v říjnu 2026.">
+<meta property="og:title" content="Podzimní firemní akce se slevou 30 % | Hotel Kaskáda Brno">
+<meta property="og:description" content="Vaše podzimní konference si zaslouží tenhle výhled. Sleva 30 % na celodenní pronájem prostor pro akce v říjnu 2026.">
 <meta property="og:image" content="assets/restaurant.jpg">
 <meta property="og:locale" content="cs_CZ">
 
@@ -98,6 +98,24 @@ h1,h2,h3{font-family:"Archivo",sans-serif;margin:0;letter-spacing:-.02em;line-he
 .tier.featured .pct{color:var(--red)}
 .tier .desc{color:var(--muted);font-size:14.5px;margin:0}
 .tiers-note{margin-top:22px;color:var(--muted);font-size:13.5px;max-width:72ch;line-height:1.6}
+
+/* Venue price cards */
+.venue{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line-soft);
+  border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 50px -40px rgba(27,29,31,.4);
+  transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
+.venue:hover{transform:translateY(-4px);box-shadow:0 30px 60px -40px rgba(27,29,31,.5)}
+.venue-photo{position:relative;aspect-ratio:16/10;overflow:hidden}
+.venue-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.venue:hover .venue-photo img{transform:scale(1.05)}
+.venue-badge{position:absolute;top:14px;left:14px;z-index:2;font-family:"Archivo";font-weight:800;font-size:15px;
+  color:#fff;background:var(--red);border-radius:100px;padding:6px 14px;box-shadow:0 8px 20px -8px rgba(210,11,22,.6)}
+.venue-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:4px}
+.venue-body h3{font-family:"Archivo";font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink);margin:0}
+.venue-type{color:var(--muted);font-size:13.5px;font-weight:600;margin:0 0 12px}
+.venue-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px}
+.price-old{color:var(--muted);font-size:16px;font-weight:600;text-decoration:line-through;text-decoration-color:rgba(113,118,123,.7)}
+.price-new{font-family:"Archivo";font-weight:800;font-size:clamp(30px,5vw,38px);line-height:1;letter-spacing:-.02em;color:var(--red)}
+.price-vat{color:var(--muted);font-size:12.5px;font-weight:600;margin-top:6px}
 
 /* Co nabízíme – foto bento */
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -229,13 +247,13 @@ h1,h2,h3{font-family:"Archivo",sans-serif;margin:0;letter-spacing:-.02em;line-he
     <div class="hero-grid">
       <div class="hero-text reveal">
         <h1>Vaše podzimní<br><span class="rotator"><span class="rw" id="rotword">konference</span></span><br>si zaslouží tenhle výhled.</h1>
-        <p class="sub">Sál, gastro, bowling i golf s výhledem na hřiště. A k tomu sleva na pronájem, která roste s každým dalším člověkem. Čím víc kolegů vezmete, tím míň zaplatíte.</p>
+        <p class="sub">Sál, gastro, bowling i golf s výhledem na hřiště. A k tomu <strong>30 % sleva</strong> na celodenní pronájem prostor pro každou akci s termínem v říjnu 2026.</p>
       </div>
       <div class="hero-photo reveal">
         <img src="assets/restaurant.jpg" alt="Terasa hotelu Kaskáda s výhledem na golfové hřiště" fetchpriority="high">
       </div>
       <div class="hero-cta reveal">
-        <button class="btn btn-primary btn-lg" data-modal>Spočítat moji slevu
+        <button class="btn btn-primary btn-lg" data-modal>Chci nabídku se slevou 30 %
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         <div class="hero-trust">
           <span class="d"><span class="dot"></span> Ozveme se do 24 hodin</span>
@@ -250,15 +268,39 @@ h1,h2,h3{font-family:"Archivo",sans-serif;margin:0;letter-spacing:-.02em;line-he
 <section class="section" id="sleva">
   <div class="wrap">
     <div class="sec-head reveal">
-      <h2>Víc lidí, větší sleva. Bez háčků.</h2>
-      <p class="lead">Platí na firemní akce s termínem v <strong>říjnu 2026</strong>. Slevu počítáme z ceny pronájmu prostor podle toho, kolik vás dorazí.</p>
+      <h2>Sleva 30 % na celodenní pronájem prostor.</h2>
+      <p class="lead">Na všechny firemní akce s termínem v <strong>říjnu 2026</strong> dostanete <strong>30 % slevu</strong> z ceny celodenního pronájmu. Bez podmínek na počet osob, u všech tří prostorů.</p>
     </div>
     <div class="tiers">
-      <div class="tier"><div class="lbl">20 a víc lidí</div><div class="pct">20 %</div><p class="desc">Menší workshop, co nechce skončit u flipchartu a instantní kávy.</p></div>
-      <div class="tier"><div class="lbl">40 a víc lidí</div><div class="pct">40 %</div><p class="desc">Půlka firmy na jednom místě. A za prostory platíte o 40 % míň.</p></div>
-      <div class="tier featured"><span class="tag">Nejvíc ušetříte</span><div class="lbl">60 a víc lidí</div><div class="pct">60 %</div><p class="desc">Velká konference až do 120 lidí. Maximální sleva, maximální parket.</p></div>
+      <div class="venue reveal">
+        <div class="venue-photo"><span class="venue-badge">−30 %</span><img src="assets/gallery/klubovna.jpg" alt="Klubovna hotelu Kaskáda s projektorem a krbem" loading="lazy"></div>
+        <div class="venue-body">
+          <h3>Klubovna</h3>
+          <p class="venue-type">Celodenní pronájem</p>
+          <div class="venue-price"><span class="price-old">8 470 Kč</span><span class="price-new">5 929 Kč</span></div>
+          <span class="price-vat">vč. DPH</span>
+        </div>
+      </div>
+      <div class="venue reveal">
+        <div class="venue-photo"><span class="venue-badge">−30 %</span><img src="assets/gallery/cadentes.jpg" alt="Salonek Cadentes v hotelu Kaskáda" loading="lazy"></div>
+        <div class="venue-body">
+          <h3>Cadentes</h3>
+          <p class="venue-type">Celodenní pronájem</p>
+          <div class="venue-price"><span class="price-old">8 470 Kč</span><span class="price-new">5 929 Kč</span></div>
+          <span class="price-vat">vč. DPH</span>
+        </div>
+      </div>
+      <div class="venue reveal">
+        <div class="venue-photo"><span class="venue-badge">−30 %</span><img src="assets/gallery/conference.jpg" alt="Kongresový sál až pro 120 osob" loading="lazy"></div>
+        <div class="venue-body">
+          <h3>Kongresový sál</h3>
+          <p class="venue-type">Celodenní pronájem · až 120 osob</p>
+          <div class="venue-price"><span class="price-old">25 410 Kč</span><span class="price-new">17 787 Kč</span></div>
+          <span class="price-vat">vč. DPH</span>
+        </div>
+      </div>
     </div>
-    <p class="tiers-note">Sleva se vztahuje na pronájem konferenčních prostor (sál, restaurace, terasa) a platí pro nové poptávky na termíny v říjnu 2026. Nelze kombinovat s jinými slevami. Konečnou nabídku připravíme na míru podle rozsahu akce.</p>
+    <p class="tiers-note">Ceny jsou za celodenní pronájem daného prostoru včetně DPH, přeškrtnutá cena je běžný ceník, zvýrazněná cena už zahrnuje 30% slevu. Platí pro nové poptávky na termíny v říjnu 2026, nelze kombinovat s jinými slevami. Konečnou nabídku (catering, technika, ubytování) připravíme na míru.</p>
   </div>
 </section>
 
@@ -332,24 +374,24 @@ h1,h2,h3{font-family:"Archivo",sans-serif;margin:0;letter-spacing:-.02em;line-he
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="modalClose" aria-label="Zavřít">&times;</button>
     <div class="fc-head">
-      <h2 id="modalTitle">Spočítejte si slevu</h2>
-      <p>Napište počet lidí. Hned vidíte, kolik ušetříte, a my se ozveme do 24 hodin.</p>
+      <h2 id="modalTitle">Nezávazná nabídka se slevou 30 %</h2>
+      <p>Řekněte nám termín a počet lidí. Připravíme nabídku na míru se slevou 30 % a ozveme se do 24 hodin.</p>
     </div>
     <form id="leadForm" novalidate>
       <!-- WEB3FORMS: nahraďte YOUR_ACCESS_KEY klíčem z web3forms.com -->
       <input type="hidden" name="access_key" value="50ed6c21-8cb6-4977-9472-484f88053f9d">
       <input type="hidden" name="subject" value="Nová poptávka – PODZIMNÍ AKCE ŘÍJEN 2026 – Kaskáda">
       <input type="hidden" name="from_name" value="Kaskáda – akce říjen 2026">
-      <input type="hidden" name="sleva_pronajem" id="slevaField" value="0 %">
+      <input type="hidden" name="sleva_pronajem" id="slevaField" value="30 %">
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
       <div class="form-grid" id="formFields">
         <div class="field col-2">
           <label for="people">Počet osob <span class="req">*</span></label>
           <input id="people" name="pocet_osob" type="number" min="1" inputmode="numeric" required placeholder="např. 45">
         </div>
-        <div class="disc-badge" id="discBadge">
-          <span class="t" id="discText">Sleva startuje od 20 lidí</span>
-          <span class="v" id="discValue">0 %</span>
+        <div class="disc-badge active" id="discBadge">
+          <span class="t" id="discText">Sleva na celodenní pronájem prostor</span>
+          <span class="v" id="discValue">30 %</span>
         </div>
         <div class="field"><label for="name">Jméno a příjmení <span class="req">*</span></label><input id="name" name="name" type="text" required placeholder="Jan Novák" autocomplete="name"></div>
         <div class="field"><label for="company">Firma <span class="req">*</span></label><input id="company" name="company" type="text" required placeholder="Vaše společnost" autocomplete="organization"></div>
@@ -438,15 +480,7 @@ h1,h2,h3{font-family:"Archivo",sans-serif;margin:0;letter-spacing:-.02em;line-he
   modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
 
-  // Živý výpočet slevy
-  var peopleInput=$('#people'),badge=$('#discBadge'),discText=$('#discText'),discValue=$('#discValue'),slevaField=$('#slevaField');
-  function discountFor(n){if(n>=60)return 60;if(n>=40)return 40;if(n>=20)return 20;return 0;}
-  peopleInput.addEventListener('input',function(){
-    var n=parseInt(peopleInput.value,10),d=(n&&n>0)?discountFor(n):0;
-    discValue.textContent=d+' %';slevaField.value=d+' %';
-    if(d>0){badge.classList.add('active');discText.textContent='Ušetříte na pronájmu prostor';}
-    else{badge.classList.remove('active');discText.textContent='Sleva startuje od 20 lidí';}
-  });
+  // Plošná sleva 30 % – badge i skryté pole sleva_pronajem jsou statické (viz HTML)
 
   // Form submit
   var form=$('#leadForm'),errBox=$('#formError'),btn=$('#submitBtn'),fields=$('#formFields'),success=$('#formSuccess'),gdpr=$('#gdpr');
