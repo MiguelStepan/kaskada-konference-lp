@@ -277,6 +277,24 @@ body.modal-open{overflow:hidden}
 .tier .desc{color:var(--muted);font-size:14.5px;margin:0}
 .tiers-note{margin:22px auto 0;color:var(--muted);font-size:13.5px;max-width:64ch;line-height:1.6;text-align:center}
 .sleva-cta{text-align:center;margin-top:30px}
+
+/* Venue price cards (dark) */
+.venue{position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,var(--panel),#141619);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  transition:transform .35s var(--ease),border-color .35s}
+.venue:hover{transform:translateY(-4px);border-color:rgba(227,6,19,.45)}
+.venue-photo{position:relative;aspect-ratio:16/10;overflow:hidden}
+.venue-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.venue:hover .venue-photo img{transform:scale(1.05)}
+.venue-badge{position:absolute;top:14px;left:14px;z-index:2;font-family:"Archivo";font-weight:800;font-size:15px;
+  color:#fff;background:var(--red);border-radius:100px;padding:6px 14px;box-shadow:0 8px 20px -8px rgba(227,6,19,.7)}
+.venue-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:4px}
+.venue-body h3{font-family:"Archivo";font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--white);margin:0}
+.venue-type{color:var(--muted);font-size:13.5px;font-weight:600;margin:0 0 12px}
+.venue-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px}
+.price-old{color:var(--muted);font-size:16px;font-weight:600;text-decoration:line-through;text-decoration-color:rgba(122,127,133,.7)}
+.price-new{font-family:"Archivo";font-weight:800;font-size:clamp(30px,5vw,38px);line-height:1;letter-spacing:-.02em;color:var(--red)}
+.price-vat{color:var(--muted);font-size:12.5px;font-weight:600;margin-top:6px}
 #sleva{scroll-margin-top:118px}
 
 /* ---------- Closing CTA band ---------- */
@@ -353,8 +371,8 @@ body.modal-open{overflow:hidden}
 
 <!-- ============ TOP BANNER ============ -->
 <a class="top-banner" href="#sleva">
-  <span class="bn-full">Podzimní akce: říjnové termíny se zvýhodněnou cenou pronájmu</span>
-  <span class="bn-short">Zvýhodněné pronájmy v říjnu</span>
+  <span class="bn-full">Podzimní akce: říjnové termíny se slevou 30 % na pronájem prostor</span>
+  <span class="bn-short">Sleva 30 % na pronájem v říjnu</span>
   <span class="go">Jak to funguje →</span>
 </a>
 
@@ -425,15 +443,39 @@ body.modal-open{overflow:hidden}
 <section class="section" id="sleva">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <h2>Čím větší akce, tím výhodnější nabídka</h2>
-      <p>Pořádáte firemní akci v říjnu? Získáte slevu na pronájem konferenčních prostor podle počtu účastníků. Čím víc lidí, tím větší sleva.</p>
+      <h2>Sleva 30 % na celodenní pronájem prostor</h2>
+      <p>Pořádáte firemní akci v říjnu 2026? Na celodenní pronájem všech tří prostorů dostanete slevu 30 %. Bez podmínek na počet osob.</p>
     </div>
     <div class="tiers reveal">
-      <div class="tier"><div class="lbl">20 a víc lidí</div><div class="pct">20 %</div><p class="desc">Sleva na pronájem prostor pro menší firemní akce a workshopy.</p></div>
-      <div class="tier"><div class="lbl">40 a víc lidí</div><div class="pct">40 %</div><p class="desc">Sleva na pronájem pro střední konference a firemní setkání.</p></div>
-      <div class="tier featured"><span class="tag">Nejvíc ušetříte</span><div class="lbl">60 a víc lidí</div><div class="pct">60 %</div><p class="desc">Maximální sleva na pronájem pro velké konference až do 120 osob.</p></div>
+      <div class="venue">
+        <div class="venue-photo"><span class="venue-badge">−30 %</span><img src="assets/gallery/klubovna.jpg" alt="Klubovna hotelu Kaskáda s projektorem a krbem" loading="lazy"></div>
+        <div class="venue-body">
+          <h3>Klubovna</h3>
+          <p class="venue-type">Celodenní pronájem</p>
+          <div class="venue-price"><span class="price-old">8 470 Kč</span><span class="price-new">5 929 Kč</span></div>
+          <span class="price-vat">vč. DPH</span>
+        </div>
+      </div>
+      <div class="venue">
+        <div class="venue-photo"><span class="venue-badge">−30 %</span><img src="assets/gallery/cadentes.jpg" alt="Salonek Cadentes v hotelu Kaskáda" loading="lazy"></div>
+        <div class="venue-body">
+          <h3>Cadentes</h3>
+          <p class="venue-type">Celodenní pronájem</p>
+          <div class="venue-price"><span class="price-old">8 470 Kč</span><span class="price-new">5 929 Kč</span></div>
+          <span class="price-vat">vč. DPH</span>
+        </div>
+      </div>
+      <div class="venue">
+        <div class="venue-photo"><span class="venue-badge">−30 %</span><img src="assets/gallery/conference.jpg" alt="Kongresový sál až pro 120 osob" loading="lazy"></div>
+        <div class="venue-body">
+          <h3>Kongresový sál</h3>
+          <p class="venue-type">Celodenní pronájem · až 120 osob</p>
+          <div class="venue-price"><span class="price-old">25 410 Kč</span><span class="price-new">17 787 Kč</span></div>
+          <span class="price-vat">vč. DPH</span>
+        </div>
+      </div>
     </div>
-    <p class="tiers-note reveal">Zvýhodněné ceny pronájmu platí pro nové poptávky na termíny v <strong>říjnu 2026</strong>. Sleva se počítá z ceny pronájmu prostor, konečnou nabídku připravíme na míru.</p>
+    <p class="tiers-note reveal">Ceny jsou za celodenní pronájem daného prostoru včetně DPH, přeškrtnutá cena je běžný ceník, zvýrazněná cena už zahrnuje 30% slevu. Platí pro nové poptávky na termíny v <strong>říjnu 2026</strong>, nelze kombinovat s jinými slevami. Konečnou nabídku (catering, technika, ubytování) připravíme na míru.</p>
     <div class="sleva-cta reveal"><button class="btn btn-primary btn-lg" data-modal>Nezávazná poptávka</button></div>
   </div>
 </section>
@@ -501,8 +543,8 @@ body.modal-open{overflow:hidden}
       <p>Ozveme se do 24 hodin s termínem a nabídkou na míru.</p>
     </div>
     <div class="modal-promo">
-      <strong>Podzimní akce:</strong> na říjnové termíny sleva na pronájem až <b>60 %</b>.
-      <span class="mp-tiers">20+ osob → 20 % · 40+ → 40 % · 60+ → 60 %</span>
+      <strong>Podzimní akce:</strong> na říjnové termíny sleva <b>30 %</b> na celodenní pronájem prostor.
+      <span class="mp-tiers">Klubovna a Cadentes 5 929 Kč · Kongresový sál 17 787 Kč (vč. DPH)</span>
     </div>
     <form id="leadForm" novalidate>
       <input type="hidden" name="access_key" value="50ed6c21-8cb6-4977-9472-484f88053f9d">
