@@ -1,0 +1,228 @@
+<!doctype html>
+<!--
+  ŠABLONA zásad ochrany osobních údajů pro Hotel Kaskáda Brno / TMR ČR.
+  Vychází z běžné struktury GDPR dokumentu. PŘED ostrým nasazením nechte
+  zkontrolovat právním oddělením / DPO správce (TMR). Doplňte/ověřte:
+  - kontakt na pověřence pro ochranu osobních údajů (DPO), pokud je jmenován,
+  - přesné doby uchování dle interních směrnic,
+  - případný odkaz na oficiální skupinové zásady TMR.
+-->
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zásady ochrany osobních údajů | Hotel Kaskáda Brno</title>
+<meta name="description" content="Zásady ochrany osobních údajů a používání cookies na webu Hotelu Kaskáda Brno.">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e0f11;--panel:#1a1d21;--line:rgba(255,255,255,.10);
+  --white:#f6f4ef;--muted:#a2a7ae;--muted-2:#c7ccd2;--red:#e30613;
+  --radius:16px;--maxw:820px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--muted-2);
+  font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--white);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--red)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* Header */
+.head{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;
+  background:rgba(14,15,17,.86);backdrop-filter:blur(12px)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo img{height:30px;width:auto;display:block}
+.back{font-size:14px;font-weight:600;color:var(--muted-2);text-decoration:none;
+  display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border:1px solid var(--line);border-radius:100px;transition:border-color .3s,color .3s}
+.back:hover{color:var(--white);border-color:rgba(255,255,255,.3)}
+.back svg{width:15px;height:15px}
+
+/* Doc */
+.doc{padding:56px 0 80px}
+.eyebrow{color:var(--red);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 12px}
+h1{font-family:"Archivo";font-weight:800;letter-spacing:-.02em;line-height:1.08;
+  font-size:clamp(30px,6vw,44px);color:var(--white);margin:0 0 12px}
+.updated{color:var(--muted);font-size:14px;margin:0 0 40px}
+h2{font-family:"Archivo";font-weight:700;letter-spacing:-.01em;color:var(--white);
+  font-size:clamp(20px,3.4vw,24px);margin:44px 0 12px}
+h3{font-weight:700;color:var(--white);font-size:16.5px;margin:24px 0 6px}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin:0 0 8px}
+strong{color:var(--muted-2);font-weight:700}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;margin:0 0 14px}
+.card p{margin:0 0 6px}
+.card p:last-child{margin:0}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;margin:0 0 40px}
+.toc h2{margin:0 0 10px;font-size:16px}
+.toc ol{margin:0;padding-left:20px;columns:2;column-gap:28px}
+.toc li{margin:0 0 6px}
+.toc a{color:var(--muted-2);text-decoration:none}
+.toc a:hover{color:var(--red)}
+table{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:14.5px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--white);font-weight:700}
+td{color:var(--muted-2)}
+.note{color:var(--muted);font-size:13.5px;font-style:italic}
+
+/* Footer */
+.foot{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--muted);font-size:13.5px}
+.foot a{color:var(--muted-2)}
+@media(max-width:600px){.toc ol{columns:1}}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Hotel Kaskáda Brno"><img src="assets/logo-hotel-white.png" alt="Hotel Kaskáda Brno"></a>
+    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Zpět na web</a>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <p class="eyebrow">Ochrana soukromí</p>
+    <h1>Zásady ochrany osobních údajů</h1>
+    <p class="updated">Účinné od 7. 7. 2026</p>
+
+    <p>Tyto zásady popisují, jaké osobní údaje o vás zpracováváme, když navštívíte tento web nebo nám prostřednictvím poptávkového formuláře pošlete nezávaznou poptávku na firemní akci, a jaká máte v souvislosti se zpracováním práva. Zpracování probíhá v souladu s nařízením <strong>(EU) 2016/679 (GDPR)</strong> a zákonem č. 110/2019 Sb., o zpracování osobních údajů.</p>
+
+    <nav class="toc" aria-label="Obsah">
+      <h2>Obsah</h2>
+      <ol>
+        <li><a href="#spravce">Správce osobních údajů</a></li>
+        <li><a href="#udaje">Jaké údaje zpracováváme</a></li>
+        <li><a href="#ucely">Účely a právní základ</a></li>
+        <li><a href="#cookies">Cookies a měření</a></li>
+        <li><a href="#prijemci">Příjemci a zpracovatelé</a></li>
+        <li><a href="#tretizeme">Předávání mimo EU</a></li>
+        <li><a href="#doba">Doba uložení</a></li>
+        <li><a href="#prava">Vaše práva</a></li>
+        <li><a href="#kontakt">Kontakt a dozorový úřad</a></li>
+      </ol>
+    </nav>
+
+    <section id="spravce">
+      <h2>1. Správce osobních údajů</h2>
+      <p>Správcem vašich osobních údajů je provozovatel Hotelu Kaskáda Brno:</p>
+      <div class="card">
+        <p><strong>Tatry mountain resorts CR, a.s.</strong></p>
+        <p>IČO: 06871917 · DIČ: CZ06871917</p>
+        <p>sídlo: Ostravice 75, 739 14 Ostravice</p>
+        <p>provozovna: Hotel Kaskáda Brno, Na Golfu 1772/1, 664 34 Kuřim</p>
+        <p>e-mail: <a href="mailto:kristyna.fabianova@tmr.sk">kristyna.fabianova@tmr.sk</a> · tel.: <a href="tel:+420602428607">+420 602 428 607</a></p>
+      </div>
+      <p class="note">Máte-li dotaz ke zpracování osobních údajů nebo chcete uplatnit svá práva, kontaktujte nás na uvedeném e-mailu.</p>
+    </section>
+
+    <section id="udaje">
+      <h2>2. Jaké osobní údaje zpracováváme</h2>
+      <h3>Údaje z poptávkového formuláře</h3>
+      <p>Když nám pošlete poptávku, zpracováváme údaje, které nám sami vyplníte:</p>
+      <ul>
+        <li>jméno a příjmení,</li>
+        <li>název společnosti,</li>
+        <li>e-mailová adresa,</li>
+        <li>telefonní číslo (nepovinné),</li>
+        <li>počet osob, předpokládaný termín a text vaší zprávy (nepovinné).</li>
+      </ul>
+      <h3>Údaje získané automaticky</h3>
+      <p>Při návštěvě webu mohou být zpracovány technické údaje (IP adresa, typ prohlížeče a zařízení, čas návštěvy) a údaje z cookies a měřicích nástrojů, a to v rozsahu podle vašeho souhlasu, viz kapitola <a href="#cookies">Cookies a měření</a>.</p>
+    </section>
+
+    <section id="ucely">
+      <h2>3. Účely a právní základ zpracování</h2>
+      <table>
+        <thead><tr><th>Účel</th><th>Právní základ (GDPR)</th></tr></thead>
+        <tbody>
+          <tr><td>Vyřízení vaší poptávky, příprava a zaslání nabídky, vzájemná komunikace</td><td>čl. 6 odst. 1 písm. b) – jednání před uzavřením smlouvy na vaši žádost</td></tr>
+          <tr><td>Provoz a zabezpečení webu, základní (technické) cookies</td><td>čl. 6 odst. 1 písm. f) – oprávněný zájem na funkčním a bezpečném webu</td></tr>
+          <tr><td>Měření návštěvnosti a marketing (analytické a marketingové cookies, Meta Pixel)</td><td>čl. 6 odst. 1 písm. a) – váš souhlas udělený v cookie liště</td></tr>
+          <tr><td>Ochrana právních nároků, plnění zákonných povinností</td><td>čl. 6 odst. 1 písm. c) a f)</td></tr>
+        </tbody>
+      </table>
+      <p>Poskytnutí údajů ve formuláři je dobrovolné. Bez uvedení kontaktních údajů (jméno, firma, e-mail) vám ale nemůžeme na poptávku odpovědět.</p>
+    </section>
+
+    <section id="cookies">
+      <h2>4. Cookies a měření návštěvnosti</h2>
+      <p>Cookies jsou malé soubory ukládané ve vašem prohlížeči. Používáme:</p>
+      <ul>
+        <li><strong>Nezbytné (technické) cookies</strong> – zajišťují základní funkce webu a zapamatování vaší volby v cookie liště. Nevyžadují souhlas.</li>
+        <li><strong>Analytické a marketingové cookies a nástroje</strong> – zejména <strong>Meta Pixel</strong> (Meta Platforms) pro měření a cílení reklamy; případně Google Analytics pro anonymní statistiku návštěvnosti. Načítají se <strong>až po vašem souhlasu</strong>.</li>
+      </ul>
+      <p>Souhlas udělujete kliknutím na „Přijmout“ v cookie liště a je uložen ve vašem prohlížeči. Souhlas můžete kdykoli odvolat – smazáním cookies v prohlížeči (poté se cookie lišta zobrazí znovu) nebo úpravou nastavení prohlížeče. Marketingové skripty se bez souhlasu vůbec nenačtou.</p>
+    </section>
+
+    <section id="prijemci">
+      <h2>5. Příjemci a zpracovatelé osobních údajů</h2>
+      <p>Vaše údaje nepředáváme třetím stranám k jejich vlastním účelům. Na zajištění provozu spolupracujeme s prověřenými zpracovateli:</p>
+      <ul>
+        <li><strong>Web3Forms</strong> – zpracování a doručení odeslaného formuláře na náš e-mail.</li>
+        <li><strong>Meta Platforms Ireland Ltd.</strong> – měření a cílení reklamy (Meta Pixel), pouze s vaším souhlasem.</li>
+        <li><strong>Google Ireland Ltd.</strong> – měření návštěvnosti (Google Analytics), je-li aktivní a jen s vaším souhlasem.</li>
+        <li><strong>Poskytovatel hostingu webu</strong> – technický provoz stránek.</li>
+      </ul>
+      <p>Údaje mohou být dále v nezbytném rozsahu zpřístupněny v rámci skupiny TMR a orgánům veřejné moci, stanoví-li tak zákon.</p>
+    </section>
+
+    <section id="tretizeme">
+      <h2>6. Předávání údajů mimo EU</h2>
+      <p>Někteří zpracovatelé (např. Meta, Google, Web3Forms) mohou zpracovávat údaje i mimo Evropský hospodářský prostor. V takovém případě je předání zajištěno vhodnými zárukami podle GDPR – zejména standardními smluvními doložkami Evropské komise, případně na základě rozhodnutí o odpovídající ochraně (EU–US Data Privacy Framework).</p>
+    </section>
+
+    <section id="doba">
+      <h2>7. Doba uložení údajů</h2>
+      <ul>
+        <li><strong>Poptávky a související komunikace</strong> – po dobu vyřízení poptávky a následně po dobu nezbytnou k ochraně právních nároků, zpravidla nejdéle 3 roky od posledního kontaktu.</li>
+        <li><strong>Údaje na základě souhlasu (cookies)</strong> – po dobu platnosti příslušných cookies nebo do odvolání souhlasu.</li>
+        <li><strong>Údaje zpracovávané ze zákona</strong> – po dobu stanovenou příslušnými právními předpisy.</li>
+      </ul>
+    </section>
+
+    <section id="prava">
+      <h2>8. Vaše práva</h2>
+      <p>V souvislosti se zpracováním osobních údajů máte právo:</p>
+      <ul>
+        <li>na <strong>přístup</strong> ke svým údajům a na jejich kopii,</li>
+        <li>na <strong>opravu</strong> nepřesných nebo doplnění neúplných údajů,</li>
+        <li>na <strong>výmaz</strong> („právo být zapomenut“) a na <strong>omezení zpracování</strong>,</li>
+        <li>vznést <strong>námitku</strong> proti zpracování z titulu oprávněného zájmu,</li>
+        <li>na <strong>přenositelnost</strong> údajů, které jste nám poskytli,</li>
+        <li><strong>odvolat souhlas</strong> se zpracováním, které je na souhlasu založeno (odvolání nemá vliv na zpracování před odvoláním),</li>
+        <li>podat <strong>stížnost</strong> u dozorového úřadu.</li>
+      </ul>
+      <p>Svá práva uplatníte na e-mailu <a href="mailto:kristyna.fabianova@tmr.sk">kristyna.fabianova@tmr.sk</a>.</p>
+    </section>
+
+    <section id="kontakt">
+      <h2>9. Kontakt a dozorový úřad</h2>
+      <p>Ve věcech ochrany osobních údajů nás kontaktujte na <a href="mailto:kristyna.fabianova@tmr.sk">kristyna.fabianova@tmr.sk</a> nebo na tel. <a href="tel:+420602428607">+420 602 428 607</a>.</p>
+      <p>Nejste-li s vyřízením spokojeni, máte právo podat stížnost u dozorového úřadu:</p>
+      <div class="card">
+        <p><strong>Úřad pro ochranu osobních údajů</strong></p>
+        <p>Pplk. Sochora 27, 170 00 Praha 7</p>
+        <p>web: <a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a></p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    © <span id="yr">2026</span> Hotel Kaskáda Brno · Provozovatel: Tatry mountain resorts CR, a.s., IČO 06871917. · <a href="index.html">Zpět na hlavní stránku</a>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
