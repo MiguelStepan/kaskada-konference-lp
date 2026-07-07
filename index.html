@@ -489,9 +489,9 @@ body.modal-open{overflow:hidden}
     </div>
     <div class="gallery reveal">
       <button type="button" class="gtile big" data-photos='[{"src":"assets/evening.jpg","cap":"Resort za soumraku"},{"src":"assets/gallery/aerial-1.jpg","cap":"Areál z ptačí perspektivy"},{"src":"assets/gallery/aerial-2.jpg","cap":"Golfové hřiště a jezera"},{"src":"assets/gallery/aerial-3.jpg","cap":"Kaskáda z výšky"},{"src":"assets/gallery/panorama-golf.jpg","cap":"Panorama hřiště"}]'><img src="assets/evening.jpg" alt="Resort Kaskáda za soumraku" loading="lazy"><div class="cap"><span>Resort v srdci přírody</span><span class="gcount">5 fotek</span></div></button>
-      <button type="button" class="gtile" data-photos='[{"src":"assets/room.jpg","cap":"Hotelový pokoj"},{"src":"assets/gallery/hotel-3.jpg","cap":"Hotelový pokoj Superior"},{"src":"assets/gallery/hotel-1.jpg","cap":"Ubytování v areálu resortu"}]'><img src="assets/room.jpg" alt="Hotelový pokoj Kaskáda" loading="lazy"><div class="cap"><span>47 pokojů na místě</span><span class="gcount">3 fotky</span></div></button>
-      <button type="button" class="gtile" data-photos='[{"src":"assets/wellness.jpg","cap":"Wellness a relax"},{"src":"assets/gallery/lounge.jpg","cap":"Odpočinková zóna"}]'><img src="assets/wellness.jpg" alt="Wellness v hotelu Kaskáda" loading="lazy"><div class="cap"><span>Wellness &amp; relax</span><span class="gcount">2 fotky</span></div></button>
-      <button type="button" class="gtile" data-photos='[{"src":"assets/golf-akademie.jpg","cap":"Zkouška golfu s instruktorem"},{"src":"assets/golf.jpg","cap":"Golfové hřiště"},{"src":"assets/gallery/golf-sim-1.jpg","cap":"Golfový simulátor"}]'><img src="assets/golf-akademie.jpg" alt="Golfová akademie – skupina hostů na hřišti" loading="lazy"><div class="cap"><span>Zkouška golfu</span><span class="gcount">3 fotky</span></div></button>
+      <button type="button" class="gtile" data-photos='[{"src":"assets/room.jpg"},{"src":"assets/gallery/hotel-1.jpg"}]'><img src="assets/room.jpg" alt="Hotelový pokoj Kaskáda" loading="lazy"><div class="cap"><span>47 pokojů na místě</span><span class="gcount">2 fotky</span></div></button>
+      <button type="button" class="gtile" data-photos='[{"src":"assets/wellness.jpg"}]'><img src="assets/wellness.jpg" alt="Wellness v hotelu Kaskáda" loading="lazy"><div class="cap"><span>Wellness &amp; relax</span></div></button>
+      <button type="button" class="gtile" data-photos='[{"src":"assets/golf-akademie.jpg"},{"src":"assets/gallery/golf-akademie-2.jpg"},{"src":"assets/gallery/golf-sim-1.jpg"}]'><img src="assets/golf-akademie.jpg" alt="Golfová akademie – skupina hostů na hřišti" loading="lazy"><div class="cap"><span>Zkouška golfu</span><span class="gcount">3 fotky</span></div></button>
       <button type="button" class="gtile" data-photos='[{"src":"assets/catering.jpg","cap":"Catering a slavnostní tabule"},{"src":"assets/gallery/restaurant-terrace.jpg","cap":"Restaurace s terasou"},{"src":"assets/gallery/table-set.jpg","cap":"Slavnostní tabule"},{"src":"assets/gallery/serving.jpg","cap":"Servis à la carte"},{"src":"assets/gallery/dish-1.jpg","cap":"Gastronomie na míru"},{"src":"assets/gallery/bar.jpg","cap":"Bar"}]'><img src="assets/catering.jpg" alt="Restaurace s prostřenými stoly a výhledem na hřiště" loading="lazy"><div class="cap"><span>Gastronomie &amp; catering</span><span class="gcount">6 fotek</span></div></button>
     </div>
   </div>
@@ -696,8 +696,7 @@ body.modal-open{overflow:hidden}
     if(!lbPhotos.length) return;
     lbIdx=(i+lbPhotos.length)%lbPhotos.length;
     var p=lbPhotos[lbIdx];
-    lbImg.src=p.src; lbImg.alt=p.cap||'';
-    lbCap.textContent=p.cap||'';
+    lbImg.src=p.src; lbImg.alt='';
     lbCount.textContent=(lbIdx+1)+' / '+lbPhotos.length;
   }
   function lbOpen(t){
