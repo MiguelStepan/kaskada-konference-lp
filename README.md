@@ -36,19 +36,20 @@ Bez backendu, se spam ochranou (honeypot), zdarma 250 odeslání/měsíc.
 - Autoresponder (auto-odpověď zákazníkovi) se dá zapnout ve Web3Forms dashboardu.
 
 ### 2) Kontakty — ✅ doplněné z prezentace
-E-mail `jakub.julina@tmr.sk` a telefon `+420 604 290 817` jsou už v hlavičce,
+E-mail `kristyna.fabianova@tmr.sk` a telefon `+420 602 428 607` jsou už v hlavičce,
 patičce i sticky tlačítku. Zkontroluj, že jsou aktuální, a doplň ještě:
-- odkaz na **zásady ochrany osobních údajů** u souhlasu ve formuláři (`href="#"`)
 - přesnou **adresu** v patičce (teď „Jinačovice, 15 min od Brna“ + odkaz na mapu)
 
-### 3) Měření konverzí — GA4 + Meta Pixel
-V `<head>` jsou připravené **zakomentované** bloky. Až budeš mít účty:
-- odkomentuj blok GA4 a vlož `G-XXXXXXXXXX` (Measurement ID),
-- odkomentuj blok Meta Pixel a vlož `XXXXXXXXXXXXXXX` (Pixel ID).
+### ⚠️ GDPR odkaz — POTVRDIT URL
+Odkaz na zásady (u formuláře i v cookie liště) míří na **placeholder**
+`https://hotelbrnokaskada.cz/ochrana-osobnich-udaju`. Pošli reálnou URL zásad
+a vyměním ji ve všech 3 LP (je na 6 místech).
 
-Konverze z odeslaného formuláře se pak pošle **automaticky**:
-- GA4 event `generate_lead`
-- Meta Pixel event `Lead`
+### 3) Měření konverzí — Meta Pixel (+ GA4)
+**Meta Pixel `1491713005580203` je aktivní**, ale načítá se **až po souhlasu**
+v cookie liště (GDPR/ePrivacy). Po „Přijmout“ → PageView; po odeslání formuláře → **Lead**.
+Souhlas se pamatuje v `localStorage` (`cc-consent`).
+- GA4 zatím nedoplněno — až budeš mít Measurement ID, odkomentuju a napojím (event `generate_lead`).
 
 (Logika je už ve skriptu dole, není třeba nic dopisovat.)
 
